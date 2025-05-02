@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1 class="name">SETTY PAVITHRA SAI NAVYA MANI</h1>
+        <p class="typing">I'm <span id="typing-text"></span></p>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/setty-pavithra-sai-navya-mani-84322928b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/pavithrasaisetti" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:pavithrasaisetti@gmail.com"><i class="fab fa-google"></i></a>
+            <a href="https://www.instagram.com/___s.h.e.t.t.y___/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </header>
+
+    <!-- JavaScript Typing Effect -->
+    <script>
+        const words = ["Web Developer", "Programmer"];
+        let i = 0, j = 0, isDeleting = false;
+        const typingText = document.getElementById("typing-text");
+
+        function typeEffect() {
+            const currentWord = words[i];
+            
+            if (!isDeleting && j < currentWord.length) {
+                typingText.innerHTML = currentWord.substring(0, j + 1);
+                j++;
+                setTimeout(typeEffect, 150);
+            } else if (isDeleting && j > 0) {
+                typingText.innerHTML = currentWord.substring(0, j - 1);
+                j--;
+                setTimeout(typeEffect, 100);
+            } else {
+                isDeleting = !isDeleting;
+                if (!isDeleting) i = (i + 1) % words.length;
+                setTimeout(typeEffect, isDeleting ? 1000 : 500);
+            }
+        }
+        
+        typeEffect();
+    </script>
+</body>
+</html>
