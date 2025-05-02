@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('images/image.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #1a2161;
+            text-align: center;
+        }
+
+        nav {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.2); 
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #30475e;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a.active,
+        nav ul li a:hover {
+            color: #45390a;
+            border-bottom: 2px solid #1a1a2e;
+        }
+
+        .projects-section {
+            margin-top: 80px;
+            padding: 20px;
+        }
+
+        .filter-buttons {
+            margin-bottom: 20px;
+        }
+
+        .filter-btn {
+            background: #16A085;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s ease-in-out;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: #f4b400;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .project-card {
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        .project-card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .project-card h3 {
+            color: #f4b400;
+            margin-top: 10px;
+        }
+
+        .project-card p {
+            font-size: 14px;
+            color: #ddd;
+        }
+
+        .project-links a {
+            display: inline-block;
+            margin: 5px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .github-link {
+            background-color: #333;
+        }
+
+        .live-link {
+            background-color: #16A085;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="projects-section">
+        <h2>_______Projects_______</h2>
+
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">ALL</button>
+            <button class="filter-btn" data-filter="project">PROJECT</button>
+            <button class="filter-btn" data-filter="web-app">WEB-APP</button>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card" data-category="project">
+                <img src="images/ecommerce.jpeg" alt="E-Commerce Project">
+                <h3>E-Commerce Price Comparison</h3>
+                <p>Python-based price comparison tool using BeautifulSoup & Pandas.</p>
+                <div class="project-links">
+                    <a href="https://github.com/pavithrasaisetti/E-Commerce-Price-Comparison" target="_blank" class="github-link">GitHub</a>
+                    <a href="https://pavithrasaisetti.github.io/E-Commerce-Price-Comparison" target="_blank" class="live-link">Run</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="project">
+                <img src="images/socialmedia.jpg" alt="Social Media Platform">
+                <h3>Social Media Platform</h3>
+                <p>Built with React & Node.js, improving user engagement by 25%.</p>
+                <div class="project-links">
+                    <a href="https://github.com/pavithrasaisetti/Social-Media-Platform" target="_blank" class="github-link">GitHub</a>
+                    <a href="https://pavithrasaisetti.github.io/Social-Media-Platform" target="_blank" class="live-link">Run</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="web-app">
+                <img src="images/todo.png" alt="To-Do List">
+                <h3>TO-Do List</h3>
+                <p>Task management app with React & Node.js.</p>
+                <div class="project-links">
+                    <a href="https://github.com/pavithrasaisetti/TO-DO-LIST" target="_blank" class="github-link">GitHub</a>
+                    <a href="https://pavithrasaisetti.github.io/TO-DO-LIST/" target="_blank" class="live-link">Run</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="web-app">
+                <img src="images/weather.jpg" alt="Weather Forecast">
+                <h3>Weather Forecast</h3>
+                <p>Java Full Stack application for real-time weather updates.</p>
+                <div class="project-links">
+                    <a href="https://github.com/pavithrasaisetti/weather-forecast/" target="_blank" class="github-link">GitHub</a>
+                    <a href="https://pavithrasaisetti.github.io/weather-forecast/" target="_blank" class="live-link">Run</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="web-app">
+                <img src="images/portofolio.jpg" alt="My Portfolio">
+                <h3>My Portfolio</h3>
+                <p>Personal website built with HTML, CSS, and JavaScript.</p>
+                <div class="project-links">
+                    <a href="https://github.com/pavithrasaisetti/Portfolio" target="_blank" class="github-link">GitHub</a>
+                    <a href="https://pavithrasaisetti.github.io/Portfolio/" target="_blank" class="live-link">Run</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="web-app">
+                <img src="images/snakegame.jpg" alt="Snake Game">
+                <h3>Snake and Food Game</h3>
+                <p>Classic Snake Game using Python's Turtle module.</p>
+                <div class="project-links">
+                    <a href="https://github.com/pavithrasaisetti/Snake-And-Food-Game" target="_blank" class="github-link">GitHub</a>
+                    <a href="https://pavithrasaisetti.github.io/Snake-And-Food-Game" target="_blank" class="live-link">Run</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="web-app">
+                <img src="images/guessthenum.png" alt="Guess The Number">
+                <h3>Guess the Number</h3>
+                <p>A fun game website built with HTML, CSS, and JavaScript.</p>
+                <div class="project-links">
+                    <a href="https://github.com/pavithrasaisetti/GUESSTHENUM" target="_blank" class="github-link">GitHub</a>
+                    <a href="https://pavithrasaisetti.github.io/GUESSTHENUM/" target="_blank" class="live-link">Run</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const buttons = document.querySelectorAll(".filter-btn");
+            const projects = document.querySelectorAll(".project-card");
+
+            buttons.forEach((button) => {
+                button.addEventListener("click", () => {
+                    const filter = button.getAttribute("data-filter");
+
+                    projects.forEach((project) => {
+                        project.style.display =
+                            filter === "all" || project.dataset.category === filter ? "block" : "none";
+                    });
+
+                    buttons.forEach((btn) => btn.classList.remove("active"));
+                    button.classList.add("active");
+                });
+            });
+        });
+    </script>
+</body>
+</html>
