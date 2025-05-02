@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .education-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .education-left, .education-right {
+            width: 45%;
+        }
+
+        .education-item {
+            box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.2s ease-in-out;
+        }
+        .education-item:hover {
+            transform: scale(1.02);
+        }
+
+
+        .college-logo {
+            width: 180px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+
+        h3 {
+            color: #1E3A8A; /* Royal Blue */
+        }
+
+        p strong {
+            color: #3F51B5; /* Slate Blue */
+        }
+
+        .coursework p {
+            color: #008080; /* Teal */
+        }
+
+    </style>
+</head>
+<body id="education-page"> 
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html" class="active">Education</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2 style="margin-top: 80px;">_______Education_______</h2>
+
+        <div class="education-container">
+            <div class="education-left">
+                <div class="education-item">
+                    <img src="images/kl-university-logo.png" alt="KL University Logo" class="college-logo">
+                    <p style="text-align: left; font-style: italic; font-weight: normal;">B.Tech. in Computer Science and Engineering</p>
+                    <h3>KL Deemed to be University - Guntur, Andhra Pradesh, India</h3>
+                    <p><strong>August 2022 - April 2026</strong></p>
+                    <h4>Relevant Coursework</h4>
+                    <div class="coursework">
+                        <p>Computer Science Engineering</p>
+                        <p>Python Development</p>
+                        <p>Machine Learning</p>
+                        <p>Web Development</p>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <img src="images/sri-chaitanya-logo.jpg" alt="Sri Chaitanya School Logo" class="college-logo">
+                    <p style="text-align: left; font-style: italic; font-weight: normal;">Primary Studies</p>
+                    <h3>Sri Chaitanya Techno High School - Rajahmundry, India</h3>
+                    
+                    <p><strong>Level:</strong> SSC</p>
+                    <p><strong>June 2019-April 2020</strong></p>
+                </div>
+            </div>
+            
+            <div class="education-right">
+                <div class="education-item">
+                    <img src="images/tirumala-logo.png" alt="Tirumala College Logo" class="college-logo">
+                    <p style="text-align: left; font-style: italic; font-weight: normal;">Intermediate in MPC Course</p>
+                    <h3>Tirumala Junior Mahila Kalasala - Rajahmundry, India</h3>
+                    <p><strong>June 2020-April 2022</strong></p>
+                    <h4>Relevant Coursework</h4>
+                    <div class="coursework">
+                        <p>Mathematics</p>
+                        <p>English(First Language)</p>
+                        <p>IIT Training</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
